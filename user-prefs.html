@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="onAddPrefs(event)">
+        <label for="pref-bgc">Background Color:</label>
+        <input type="text" data-trans="pref-bgc" placeholder="Prefered bgc" id="pref-bgc">
+        <label for="pref-color">Color:</label>
+        <input type="text" data-trans="pref-color" placeholder="Prefered color" id="pref-color">
+        <label for="birth-date">Birth date:</label>
+        <input type="date" id="birth-date" value="2000-01-01" min="1918-01-01" max="2001-01-01">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="name@example.com" required>
+        <label for="age">Age:</label>
+        <input type="range" id="age" min="18" max="120">
+        
+        <button type="submit" data-trans="pref-save">Save</button>
+    </form>
+
+    <div class="forecast">
+
+    </div>
+
+
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/userPrefController.js"></script>
+</body>
+
+</html>
