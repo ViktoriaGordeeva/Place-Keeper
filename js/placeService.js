@@ -50,8 +50,8 @@ function getPosition() {
 }
 
 function showLocation(position) {
-    console.log(position);
-    console.log(map)
+    // console.log(position);
+    // console.log(map)
     // document.getElementById("latitude").innerHTML = position.coords.latitude;
     // document.getElementById("longitude").innerHTML = position.coords.longitude;
     // document.getElementById("accuracy").innerHTML = position.coords.accuracy;
