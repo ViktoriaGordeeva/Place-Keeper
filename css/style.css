@@ -63,3 +63,6 @@ h1 {
 .locations-list li {
     list-style-type: none
 }
+.locations span {
+    width: 10px;
+}
