@@ -84,7 +84,7 @@ function handleLocationError(error) {
 }
 
 function loadLocationsFromStorage() {
-    gLocations = loadFromStorage(LOCATIONS_KEY);
+    gLocations = getLocations(LOCATIONS_KEY);
     if (!gLocations) gLocations = [];
     console.log('Loaded locations:', gLocations);
 }
@@ -93,7 +93,7 @@ function getLocations() {
     return gLocations
 }
 function renderLocations() {
-    var locations = getLocations()
+    var locations = loadFromStorage(LOCATIONS_KEY)
     var elLocations = document.querySelector('.saved-locations')
     var strHTMLs = locations.map((location) => {
         return `<li onclick="onLocationClick('${location.id}')">
