@@ -1,5 +1,6 @@
 'use strict'
 const FORECAST_KEY = 'forecast'
+const COLORS_KEY = 'colors'
 
 const gForecasts = [
     `Daytime: 16 °C 63 °F. Light Rain ( 19.2% ). Wind: NE 2.7 km/h. Humidity: 86.1%. 

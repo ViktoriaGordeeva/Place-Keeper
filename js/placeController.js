@@ -1,6 +1,6 @@
 'use strict'
 
-function init(){
+function init() {
     renderLocations()
     initMap()
 }

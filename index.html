@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Place Keeper</title>
 </head>
-<body onload="renderForecast()">
-    <nav>
-        <ul class="nav-bar">
-            <li>
-                <a href="user-prefs.html">Prefrences Page</a>
-            </li>
-            <li>
-                <a href="map.html">Your map</a>
-            </li>
-        </ul>
-    </nav>
 
-    <h1>Find your way back to your best places!</h1>  
-    
+<body onload="renderHome()">
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="user-prefs.html">Prefrences</a>
+        <a href="map.html">Your Map</a>
+    </div>
+
+    <h1>Find your way back to your best places!</h1>
+
     <section class="forecast-area"></section>
 
     <script src="js/util-service.js"></script>
@@ -27,4 +25,5 @@
     <script src="js/userPrefService.js"></script>
     <script src="js/userPrefController.js"></script>
 </body>
+
 </html>
