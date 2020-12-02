@@ -7,8 +7,7 @@ var gLocations;
 loadLocationsFromStorage()
 renderLocations()
 
-function initMap(lat, lng) {
-    if (!lat || !lang) lat = 29.5581, lng = 34.9482;
+function initMap(lat = 29.5581, lng = 34.9482) { //CO
     var elMap = document.querySelector('#map');
     var options = {
         center: { lat, lng },
@@ -23,14 +22,14 @@ function initMap(lat, lng) {
     var marker = new google.maps.Marker({
         position: { lat, lng },
         map,
-        title: 'Hello World!'
+        title: 'Hello Dear!'
     });
 
     map.addListener('click', (ev) => {
         // console.log('Map clicked', ev);
         const placeName = prompt('Location name:')
         const newPlace = {
-            id: makeId,
+            id: makeId(),
             placeName: placeName,
             lat: ev.latLng.lat(),
             lng: ev.latLng.lng(),
@@ -41,7 +40,7 @@ function initMap(lat, lng) {
     })
 }
 
-function getPosition() {
+function getPosition() { //CO
     if (!navigator.geolocation) {
         alert("HTML5 Geolocation is not supported in your browser.");
         return;
@@ -83,8 +82,8 @@ function handleLocationError(error) {
     }
 }
 
-function loadLocationsFromStorage() {
-    gLocations = getLocations(LOCATIONS_KEY);
+function loadLocationsFromStorage() { ///Serv
+    gLocations = loadFromStorage(LOCATIONS_KEY);
     if (!gLocations) gLocations = [];
     console.log('Loaded locations:', gLocations);
 }
@@ -92,7 +91,7 @@ function loadLocationsFromStorage() {
 function getLocations() {
     return gLocations
 }
-function renderLocations() {
+function renderLocations() { //CO
     var locations = loadFromStorage(LOCATIONS_KEY)
     var elLocations = document.querySelector('.saved-locations')
     var strHTMLs = locations.map((location) => {
@@ -104,7 +103,7 @@ function renderLocations() {
     elLocations.innerHTML = strHTMLs.join('')
 }
 
-function saveLocation(place) {
+function saveLocation(place) { //Serv
     gLocations.push(place);
     console.log('gLocations:', gLocations);
     saveToStorage(LOCATIONS_KEY, gLocations);
