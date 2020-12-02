@@ -1,8 +1,8 @@
 'use strict'
 
 function initMap(lat = 29.5581, lng = 34.9482) {
-    var elMap = document.querySelector('#map');
-    var options = {
+    const elMap = document.querySelector('#map');
+    const options = {
         center: { lat, lng },
         zoom: 16
     };
@@ -12,7 +12,7 @@ function initMap(lat = 29.5581, lng = 34.9482) {
         options
     );
 
-    var marker = new google.maps.Marker({
+    const marker = new google.maps.Marker({
         position: { lat, lng },
         map,
         title: 'Hello Dear!'
@@ -44,7 +44,7 @@ function showLocation(position) {
 }
 
 function handleLocationError(error) {
-    var locationError = document.getElementById("locationError");
+    let locationError = document.getElementById("locationError");
 
     switch (error.code) {
         case 0:
