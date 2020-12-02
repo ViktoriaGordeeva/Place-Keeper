@@ -72,10 +72,9 @@ function renderLocations() {
     if (!locations) return
     var elLocations = document.querySelector('.locations-list')
     var strHTMLs = locations.map((location) => {
-        return `<li onclick="onLocationClick('${location.id}')">
-                    ${location.placeName}
-                        <button onclick="onDelete('${location.id}')">X</button>
-                    </li>`
+        return `<li>${location.placeName}
+                    <button onclick="onDelete('${location.id}')">X</button>
+                </li>`
     })
     elLocations.innerHTML = strHTMLs.join('')
 }

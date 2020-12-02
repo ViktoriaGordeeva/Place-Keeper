@@ -1,6 +1,7 @@
 'use strict'
+const FORECAST_KEY = 'forecast'
 
-const gForecast = [
+const gForecasts = [
     `Daytime: 16 °C 63 °F. Light Rain ( 19.2% ). Wind: NE 2.7 km/h. Humidity: 86.1%. 
     Nighttime: 10 °C 52 °F. Light Rain ( 36.6% ). Wind: W 20.2 km/h. Humidity: 93.6%'`,
     `Daytime: 23 °C 75 °F. Partly Cloud. Wind: NE 10.5 km/h. Humidity: 42.6%. 
@@ -10,9 +11,9 @@ const gForecast = [
 ]
 
 function savePrefsToStorage(bgc, color, birthDate, email, age) {
-    saveToStorage('userData', {bgc, color, birthDate, email, age}) 
+    saveToStorage('userData', { bgc, color, birthDate, email, age })
 }
 
-function getForecast() {
-    return gForecast[getRandomIntInclusive(0, 2)]
+function getForecastById(id) {
+    return gForecasts[id]
 }
