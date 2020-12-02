@@ -1,5 +1,10 @@
 'use strict'
 
+function init(){
+    renderLocations()
+    initMap()
+}
+
 function initMap(lat = 29.5581, lng = 34.9482) {
     const elMap = document.querySelector('#map');
     const options = {
