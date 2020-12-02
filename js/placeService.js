@@ -44,7 +44,7 @@ function showLocation(position) {
     // var date = new Date(position.timestamp);
     // document.getElementById("timestamp").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
     // initMap(position.coords.latitude, position.coords.longitude);
-    Map.setCenter(position.coords.latitude, position.coords.longitude, 16)
+    map.setCenter(position.coords.latitude, position.coords.longitude, 16)
 }
 
 function handleLocationError(error) {
