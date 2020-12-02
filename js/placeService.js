@@ -1,5 +1,6 @@
 'use strict'
 
+var map;
 
 function initMap(lat, lng) {
     if (!lat || !lang) lat = 29.5581, lng = 34.9482;
@@ -9,7 +10,7 @@ function initMap(lat, lng) {
         zoom: 16
     };
 
-    var map = new google.maps.Map(
+    map = new google.maps.Map(
         elMap,
         options
     );
