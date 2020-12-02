@@ -69,8 +69,8 @@ function handleLocationError(error) {
 
 function renderLocations() {
     var locations = loadFromStorage(LOCATIONS_KEY)
-    if (locations) return
-    var elLocations = document.querySelector('.saved-locations')
+    if (!locations) return
+    var elLocations = document.querySelector('.locations-list')
     var strHTMLs = locations.map((location) => {
         return `<li onclick="onLocationClick('${location.id}')">
                     ${location.placeName}

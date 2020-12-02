@@ -5,7 +5,7 @@ var map;
 var gLocations;
 
 loadLocationsFromStorage()
-renderLocations()
+// renderLocations()
 
 
 function loadLocationsFromStorage() {
